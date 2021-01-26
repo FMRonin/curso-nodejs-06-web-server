@@ -11,6 +11,7 @@ hbs.registerPartials(__dirname + '/views/partials', function (err) {})
 //Helpers
 hbs.registerHelper('anio', (options) => new Date().getFullYear());
 
+const PORT = process.env.PORT || 5000;
 
 app.get('/', function (req, res) {
     res.render('home',{
@@ -31,6 +32,6 @@ app.get('/about', function (req, res) {
     res.render('about')
 })
  
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('escuchando en el puerto 3000');
 })
