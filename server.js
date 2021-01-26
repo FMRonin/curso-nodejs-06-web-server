@@ -11,7 +11,7 @@ hbs.registerPartials(__dirname + '/views/partials', function (err) {})
 //Helpers
 hbs.registerHelper('anio', (options) => new Date().getFullYear());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.get('/', function (req, res) {
     res.render('home',{
